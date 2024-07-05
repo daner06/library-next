@@ -8,37 +8,41 @@ import {
   StyledSearchBar,
   StyledTabButton,
   StyledTabs,
+  StyledViewContainer,
 } from "./page.styles";
 import { useState } from "react";
+import { Featured, KPI, Layouts, Storyboards } from "./viewTabs";
+import { Tab } from "./types";
 
-type Tabs = {
-  key: string;
-  text: string;
-};
-
-const tabs: Tabs[] = [
+const tabs: Tab[] = [
   {
     key: "featured",
     text: "Featured",
+    view: <Featured />,
   },
   {
     key: "kpi",
     text: "KPI",
+    view: <KPI />,
   },
   {
     key: "layouts",
     text: "Layouts",
+    view: <Layouts />,
   },
   {
     key: "storyboards",
     text: "Storyboards",
+    view: <Storyboards />,
   },
 ];
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("featured");
+  const [activeTab, setActiveTab] = useState(tabs[0].key);
 
   const handleTabClick = (key: string) => setActiveTab(key);
+
+  const viewTab = tabs.find((tab) => tab.key === activeTab)?.view;
 
   return (
     <main className={styles.main}>
@@ -67,6 +71,7 @@ export default function Home() {
               );
             })}
           </StyledTabs>
+          <StyledViewContainer>{viewTab}</StyledViewContainer>
         </StyledContainer>
       </div>
     </main>

@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
-
-// should be moved into the design template.
-const backgroundPageColor = "#f8f9fc";
-const backgroundSecondaryColor = "#f1f5f8";
-const backgroundTertiaryColor = "#fff";
-const fontPrimaryColor = "#000";
-const borderPrimary = "#e2e7f1";
+import {
+  backgroundPageColor,
+  backgroundSecondaryColor,
+  backgroundTertiaryColor,
+  borderPrimary,
+  borderRadius,
+  fontPrimaryColor,
+} from "./styles";
 
 export const StyledContainer = styled("div")`
   display: flex;
@@ -28,8 +29,8 @@ export const StyledSearchBar = styled("input")`
   width: 100%;
   padding: 0.5rem;
   margin-top: 1.5rem;
-  border: 1px solid ${borderPrimary};
-  border-radius: 0.25rem;
+  border: 0.0625rem solid ${borderPrimary};
+  border-radius: ${borderRadius};
   color: ${fontPrimaryColor};
   background: ${backgroundTertiaryColor};
 `;
@@ -42,7 +43,7 @@ export const StyledTabs = styled("div")`
   background: ${backgroundSecondaryColor};
   width: 100%;
   height: 2.75rem;
-  border-radius: 0.25rem;
+  border-radius: ${borderRadius};
 `;
 
 export const StyledTabButton = styled("button", {
@@ -54,5 +55,10 @@ export const StyledTabButton = styled("button", {
   width: 100%;
   border: none;
   margin: 0.375rem;
-  border-radius: 0.25rem;
+  border-radius: ${borderRadius};
+`;
+
+export const StyledViewContainer = styled("div")`
+  margin-top: 1.5rem;
+  width: 100%;
 `;
