@@ -1,25 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
-import styled from "@emotion/styled";
-
-const StyledContainer = styled("div")`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 50rem;
-`;
-
-const StyledH1 = styled("h1")`
-  padding-bottom: 1.5rem;
-`;
-
-const StyledSearchBar = styled("input")`
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 1.5rem;
-`;
+import { StyledContainer, StyledH1, StyledSearchBar } from "./page.styles";
 
 export default function Home() {
   return (
