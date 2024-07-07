@@ -15,7 +15,7 @@ import {
   StyledLayoutChip,
   StyledGridIcon,
 } from "./AssetModalContent.styles";
-import MainContext from "../contexts/mainContext";
+import MainContext from "../contexts/MainContext";
 
 const hashTags = ["comms", "coverage", "stakeholders"];
 

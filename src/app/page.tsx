@@ -13,7 +13,7 @@ import {
   StyledViewContainer,
 } from "./page.styles";
 import { useState } from "react";
-import { MainContextProvider } from "./contexts/mainContext";
+import { MainContextProvider } from "./contexts/MainContext";
 import { Featured, KPI, Layouts, Storyboards } from "./viewTabs";
 import { Tab } from "./types";
 import AssetModal from "./assetModal/AssetModal";

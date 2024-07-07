@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import MainContext from "../contexts/mainContext";
+import MainContext from "../contexts/MainContext";
 import { StyledCard, StyledDate, StyledH3, StyledIcon } from "./Card.styles";
 import { Item } from "../types";
 
