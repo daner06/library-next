@@ -1,3 +1,28 @@
+import { useContext } from "react";
+import MainContext from "../contexts/mainContext";
+import {
+  StyledCloseButtonIcon,
+  StyledCloseButtonWrapper,
+  StyledCloseIcon,
+  StyledModal,
+  StyledModalContent,
+} from "./AssetModal.styles";
+
 export default function AssetModal() {
-  return <p>AssetModal view - coming soon!</p>;
+  const { showAssetModal, setShowAssetModal } = useContext(MainContext);
+
+  const closeModal = () => setShowAssetModal(false);
+
+  return (
+    <StyledModal isOpen={showAssetModal}>
+      <StyledModalContent>
+        <StyledCloseButtonWrapper>
+          <StyledCloseButtonIcon onClick={closeModal}>
+            <StyledCloseIcon />
+          </StyledCloseButtonIcon>
+        </StyledCloseButtonWrapper>
+        <p>Modal content</p>
+      </StyledModalContent>
+    </StyledModal>
+  );
 }

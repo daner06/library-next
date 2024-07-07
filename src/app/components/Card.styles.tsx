@@ -5,6 +5,7 @@ import {
   borderPrimary,
   borderRadius,
   chartPrimaryColor,
+  fontSecondaryColor,
 } from "../styles";
 import { PieChart } from "react-bootstrap-icons";
 
@@ -16,6 +17,7 @@ export const StyledCard = styled("div")`
   background: ${backgroundTertiaryColor};
   border-radius: ${borderRadius};
   border: 0.0625rem solid ${borderPrimary};
+  cursor: pointer;
 `;
 
 export const StyledIcon = styled(PieChart)`
@@ -30,4 +32,9 @@ export const StyledIcon = styled(PieChart)`
 
 export const StyledH3 = styled("h3")`
   padding-bottom: 0.5rem;
+`;
+
+export const StyledDate = styled("p")`
+  color: ${fontSecondaryColor};
+  padding-top: 0.25rem;
 `;

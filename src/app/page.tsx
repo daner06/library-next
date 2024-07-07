@@ -13,6 +13,7 @@ import {
   StyledViewContainer,
 } from "./page.styles";
 import { useState } from "react";
+import { MainContextProvider } from "./contexts/mainContext";
 import { Featured, KPI, Layouts, Storyboards } from "./viewTabs";
 import { Tab } from "./types";
 import AssetModal from "./assetModal/AssetModal";
@@ -48,8 +49,7 @@ export default function Home() {
   const viewTab = tabs.find((tab) => tab.key === activeTab)?.view;
 
   return (
-    <>
-      <AssetModal />
+    <MainContextProvider>
       <StyledRequestButton>
         <StyledRequestIcon />
         Request
@@ -84,6 +84,7 @@ export default function Home() {
           </StyledContainer>
         </div>
       </main>
-    </>
+      <AssetModal />
+    </MainContextProvider>
   );
 }
