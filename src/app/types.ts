@@ -10,3 +10,9 @@ export type Item = {
   description: string;
   date?: string;
 };
+
+export type Question = {
+  key: number;
+  question: string;
+  description: string;
+};

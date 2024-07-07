@@ -1,10 +1,12 @@
 import styled from "@emotion/styled";
 import {
   backgroundSecondaryColor,
+  backgroundQuinaryColor,
   borderPrimary,
   fontSecondaryColor,
+  borderRadius,
 } from "../styles";
-import { InfoCircle } from "react-bootstrap-icons";
+import { InfoCircle, Bookmark } from "react-bootstrap-icons";
 
 export const StyledHeader = styled("div")`
   display: flex;
@@ -59,4 +61,18 @@ export const StyledChart = styled("div")`
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
   background: ${backgroundSecondaryColor};
+`;
+
+export const StyledFavoriteItemButton = styled("button")`
+  width: 100%;
+  background: ${backgroundQuinaryColor};
+  border-radius: ${borderRadius};
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border: none;
+`;
+
+export const StyledBookmarkIcon = styled(Bookmark)`
+  width: 0.65rem;
+  height: 0.65rem;
 `;

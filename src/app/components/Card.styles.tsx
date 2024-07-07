@@ -4,6 +4,7 @@ import {
   backgroundTertiaryColor,
   borderPrimary,
   borderRadius,
+  cardWidth,
   chartPrimaryColor,
   fontSecondaryColor,
 } from "../styles";
@@ -12,7 +13,7 @@ import { PieChart } from "react-bootstrap-icons";
 export const StyledCard = styled("div")`
   display: flex;
   flex-direction: row;
-  width: 23.875rem;
+  width: ${cardWidth};
   padding: 1.25rem;
   background: ${backgroundTertiaryColor};
   border-radius: ${borderRadius};

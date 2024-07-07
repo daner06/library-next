@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import HashTag from "../components/HashTag";
+import BusinessQuestions from "./AssetModalBusinessQuestions";
 import {
   StyledInfoIcon,
   StyledChart,
@@ -6,11 +8,18 @@ import {
   StyledHashTagLine,
   StyledHeader,
   StyledSubtitle,
+  StyledFavoriteItemButton,
+  StyledBookmarkIcon,
 } from "./AssetModalContent.styles";
+import MainContext from "../contexts/mainContext";
 
 const hashTags = ["comms", "coverage", "stakeholders"];
 
 export default function ModalContent() {
+  const { setShowAssetModal } = useContext(MainContext);
+
+  const favoriteItem = () => setShowAssetModal(false);
+
   return (
     <>
       <StyledHeader>
@@ -50,6 +59,10 @@ export default function ModalContent() {
         </div>
       </StyledDataSummaryLine>
       <StyledChart />
+      <BusinessQuestions />
+      <StyledFavoriteItemButton onClick={favoriteItem}>
+        <StyledBookmarkIcon /> Favorite item
+      </StyledFavoriteItemButton>
     </>
   );
 }
