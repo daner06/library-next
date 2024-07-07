@@ -9,8 +9,7 @@ import {
 export const StyledContainer = styled("div")`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
   margin-top: 1.5rem;
   width: 100%;
 

@@ -6,7 +6,7 @@ import {
   fontSecondaryColor,
   borderRadius,
 } from "../styles";
-import { InfoCircle, Bookmark } from "react-bootstrap-icons";
+import { Grid3x3, InfoCircle, Bookmark } from "react-bootstrap-icons";
 
 export const StyledHeader = styled("div")`
   display: flex;
@@ -14,11 +14,38 @@ export const StyledHeader = styled("div")`
   align-items: center;
 `;
 
+export const StyledGridIcon = styled(Grid3x3)`
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  color: ${fontSecondaryColor};
+  background: ${backgroundSecondaryColor};
+`;
+
+export const StyledH2Wrapper = styled("div")`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+`;
+
+export const StyledLayoutChip = styled("div")`
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: ${borderRadius};
+  background: ${backgroundSecondaryColor};
+  font-size: 0.75rem;
+`;
+
 export const StyledSubtitle = styled("p")`
   margin-top: 0.25rem;
   margin-bottom: 1.5rem;
   font-size: 0.875rem;
   color: ${fontSecondaryColor};
+`;
+
+export const StyledDescription = styled("p")`
+  text-align: center;
 `;
 
 export const StyledHashTagLine = styled("div")`

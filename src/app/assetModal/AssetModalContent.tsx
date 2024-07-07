@@ -10,6 +10,10 @@ import {
   StyledSubtitle,
   StyledFavoriteItemButton,
   StyledBookmarkIcon,
+  StyledDescription,
+  StyledH2Wrapper,
+  StyledLayoutChip,
+  StyledGridIcon,
 } from "./AssetModalContent.styles";
 import MainContext from "../contexts/mainContext";
 
@@ -23,13 +27,17 @@ export default function ModalContent() {
   return (
     <>
       <StyledHeader>
-        <h2>Intes</h2>
+        <StyledGridIcon />
+        <StyledH2Wrapper>
+          <h2>Intes</h2>
+          <StyledLayoutChip>Layout</StyledLayoutChip>
+        </StyledH2Wrapper>
         <StyledSubtitle>Descriptive name of the Layout</StyledSubtitle>
-        <p>
+        <StyledDescription>
           Those options are already baked in with this model shoot me an email
           clear blue water but we need distributors to evangelize the new line
           to local markets.
-        </p>
+        </StyledDescription>
         <StyledHashTagLine>
           {hashTags.map((tag, index) => (
             <HashTag key={index} tag={tag} />
