@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 import { Featured, KPI, Layouts, Storyboards } from "./viewTabs";
 import { Tab } from "./types";
+import AssetModal from "./assetModal/AssetModal";
 
 const tabs: Tab[] = [
   {
@@ -48,6 +49,7 @@ export default function Home() {
 
   return (
     <>
+      <AssetModal />
       <StyledRequestButton>
         <StyledRequestIcon />
         Request
