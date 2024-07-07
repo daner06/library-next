@@ -59,6 +59,5 @@ export const StyledTabButton = styled("button", {
 `;
 
 export const StyledViewContainer = styled("div")`
-  margin-top: 1.5rem;
   width: 100%;
 `;
