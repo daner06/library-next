@@ -7,6 +7,7 @@ import {
   StyledModal,
   StyledModalContent,
 } from "./AssetModal.styles";
+import ModalContent from "./AssetModalContent";
 
 export default function AssetModal() {
   const { showAssetModal, setShowAssetModal } = useContext(MainContext);
@@ -21,7 +22,7 @@ export default function AssetModal() {
             <StyledCloseIcon />
           </StyledCloseButtonIcon>
         </StyledCloseButtonWrapper>
-        <p>Modal content</p>
+        <ModalContent />
       </StyledModalContent>
     </StyledModal>
   );
