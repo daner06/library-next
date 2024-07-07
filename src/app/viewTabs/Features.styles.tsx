@@ -1,16 +1,13 @@
 import styled from "@emotion/styled";
 
-import {
-  backgroundSecondaryColor,
-  backgroundTertiaryColor,
-  borderPrimary,
-  borderRadius,
-  fontSecondaryColor,
-} from "../styles";
+import { fontSecondaryColor } from "../styles";
 
-export const StyledH2 = styled("h2")`
-  margin-top: 2rem;
+export const StyledFeaturesH2 = styled("h2")`
   padding-bottom: 1rem;
+`;
+
+export const StyledTrendingH2 = styled(StyledFeaturesH2)`
+  margin-top: 1.75rem;
 `;
 
 export const StyledSubtitle = styled("p")`

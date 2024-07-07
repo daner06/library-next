@@ -1,12 +1,29 @@
 import styled from "@emotion/styled";
+import { Box } from "react-bootstrap-icons";
 import {
   backgroundPageColor,
   backgroundSecondaryColor,
   backgroundTertiaryColor,
   borderPrimary,
   borderRadius,
+  buttonBackgroundColor,
   fontPrimaryColor,
 } from "./styles";
+
+export const StyledRequestButton = styled("button")`
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: ${borderRadius};
+  background: ${buttonBackgroundColor};
+`;
+
+export const StyledRequestIcon = styled(Box)`
+  margin-right: 0.5rem;
+`;
 
 export const StyledContainer = styled("div")`
   display: flex;
@@ -56,8 +73,10 @@ export const StyledTabButton = styled("button", {
   border: none;
   margin: 0.375rem;
   border-radius: ${borderRadius};
+  cursor: pointer;
 `;
 
 export const StyledViewContainer = styled("div")`
+  margin-top: 1.5rem;
   width: 100%;
 `;

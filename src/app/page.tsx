@@ -5,6 +5,8 @@ import {
   StyledContainer,
   StyledDescription,
   StyledH1,
+  StyledRequestButton,
+  StyledRequestIcon,
   StyledSearchBar,
   StyledTabButton,
   StyledTabs,
@@ -45,35 +47,41 @@ export default function Home() {
   const viewTab = tabs.find((tab) => tab.key === activeTab)?.view;
 
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <StyledContainer>
-          <StyledH1>Library</StyledH1>
-          <StyledDescription>
-            Browse for assets needed to report and present analysis.
-          </StyledDescription>
-          <StyledSearchBar
-            id="search"
-            type="search"
-            placeholder="Type to search..."
-          />
-          <StyledTabs>
-            {tabs.map((tab) => {
-              const { key, text } = tab;
-              return (
-                <StyledTabButton
-                  key={key}
-                  active={activeTab === key}
-                  onClick={() => handleTabClick(key)}
-                >
-                  {text}
-                </StyledTabButton>
-              );
-            })}
-          </StyledTabs>
-          <StyledViewContainer>{viewTab}</StyledViewContainer>
-        </StyledContainer>
-      </div>
-    </main>
+    <>
+      <StyledRequestButton>
+        <StyledRequestIcon />
+        Request
+      </StyledRequestButton>
+      <main className={styles.main}>
+        <div className={styles.description}>
+          <StyledContainer>
+            <StyledH1>Library</StyledH1>
+            <StyledDescription>
+              Browse for assets needed to report and present analysis.
+            </StyledDescription>
+            <StyledSearchBar
+              id="search"
+              type="search"
+              placeholder="Type to search..."
+            />
+            <StyledTabs>
+              {tabs.map((tab) => {
+                const { key, text } = tab;
+                return (
+                  <StyledTabButton
+                    key={key}
+                    active={activeTab === key}
+                    onClick={() => handleTabClick(key)}
+                  >
+                    {text}
+                  </StyledTabButton>
+                );
+              })}
+            </StyledTabs>
+            <StyledViewContainer>{viewTab}</StyledViewContainer>
+          </StyledContainer>
+        </div>
+      </main>
+    </>
   );
 }

@@ -3,8 +3,9 @@
 import Card from "../components/Card";
 import { Item } from "../types";
 import {
+  StyledFeaturesH2,
+  StyledTrendingH2,
   StyledCardsContainer,
-  StyledH2,
   StyledSubtitle,
 } from "./Features.styles";
 
@@ -63,7 +64,7 @@ const trendingsItems: Item[] = [
 const Features = () => {
   return (
     <>
-      <StyledH2>Features</StyledH2>
+      <StyledFeaturesH2>Features</StyledFeaturesH2>
       <StyledSubtitle>Curated top picks from this week</StyledSubtitle>
       <StyledCardsContainer>
         {featuresItems.map((data) => (
@@ -77,7 +78,7 @@ const Features = () => {
 const Trending = () => {
   return (
     <>
-      <StyledH2>Trending</StyledH2>
+      <StyledTrendingH2>Trending</StyledTrendingH2>
       <StyledSubtitle>Most popular by community</StyledSubtitle>
       <StyledCardsContainer>
         {trendingsItems.map((data) => (
