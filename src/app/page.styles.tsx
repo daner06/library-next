@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Box } from "react-bootstrap-icons";
 import {
-  backgroundPageColor,
+  backgroundPrimaryColor,
   backgroundSecondaryColor,
   backgroundTertiaryColor,
   borderPrimary,
@@ -31,7 +31,7 @@ export const StyledContainer = styled("div")`
   align-items: center;
   flex-direction: column;
   width: 50rem;
-  backgroud: ${backgroundPageColor};
+  backgroud: ${backgroundPrimaryColor};
 `;
 
 export const StyledH1 = styled("h1")`

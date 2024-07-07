@@ -1,6 +1,7 @@
-export const backgroundPageColor = "#f8f9fc";
+export const backgroundPrimaryColor = "#f8f9fc";
 export const backgroundSecondaryColor = "#f1f5f8";
 export const backgroundTertiaryColor = "#fff";
+export const backgroundQuaternaryColor = "#f2f5f8";
 export const fontPrimaryColor = "#000";
 export const fontSecondaryColor = "#64748b";
 export const buttonBackgroundColor = "#65758a";
