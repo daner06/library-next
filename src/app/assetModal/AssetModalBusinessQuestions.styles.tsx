@@ -13,7 +13,7 @@ export const StyledContainer = styled("div")`
   margin-top: 1.5rem;
   width: 100%;
 
-  & div:first-child {
+  & div:first-of-type {
     background: ${backgroundSecondaryColor};
   }
 `;

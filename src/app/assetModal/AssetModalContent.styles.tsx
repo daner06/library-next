@@ -68,7 +68,7 @@ export const StyledDataSummaryLine = styled("div")`
       border-right: 0.0625rem solid ${borderPrimary};
     }
 
-    & > p:first-child {
+    & > p:first-of-type {
       font-weight: 600;
     }
 
